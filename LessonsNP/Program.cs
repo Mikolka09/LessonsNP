@@ -15,23 +15,38 @@ namespace LessonsNP
             IPAddress iP = IPAddress.Parse("127.0.0.1");
             IPEndPoint iPEnd = new IPEndPoint(iP, 1337);
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            socket.Bind(iPEnd);
-            socket.Listen(10);
             try
             {
-                Socket socket1 = socket.Accept();
-                Console.WriteLine("connect");
-                socket1.Shutdown(SocketShutdown.Both);
-            }
-            catch (Exception)
-            {
+                socket.Bind(iPEnd);
+                socket.Listen(10);
 
-                throw;
+                Console.WriteLine("Сервер запущен. Ожидание подключений...");
+                while (true)
+                {
+                    Socket socket1 = socket.Accept();
+                    StringBuilder builder = new StringBuilder();
+                    int bytes = 0;
+                    byte[] data = new byte[256];
+                    do
+                    {
+                        bytes = socket1.Receive(data);
+                        builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                    } while (socket1.Available > 0);
+                    Console.WriteLine(DateTime.Now.ToShortTimeString() + ": " + builder.ToString());
+
+                    string message = "Ваше сообщение доставлено";
+                    data = Encoding.Unicode.GetBytes(message);
+                    socket1.Send(data);
+                    socket1.Shutdown(SocketShutdown.Both);
+                    socket1.Close();
+                }
+
             }
-            finally
+            catch (Exception ex)
             {
-                socket.Shutdown(SocketShutdown.Both);
+                Console.WriteLine(ex.Message);
             }
+            
             Console.ReadKey();
 
         }

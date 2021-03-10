@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonsNP", "LessonsNP\Less
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPClient", "NPClient\NPClient.csproj", "{7D3B2F51-BAE6-478C-9B6D-4DB8EE4D0B96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleChatServer", "ConsoleChat\ConsoleChatServer.csproj", "{A2ADEB77-1DAB-4629-9A9F-C55254950FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleChatClient", "ConsoleChatClient\ConsoleChatClient.csproj", "{61F989C1-3ADF-40A6-A35C-9E7BC67FF577}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7D3B2F51-BAE6-478C-9B6D-4DB8EE4D0B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D3B2F51-BAE6-478C-9B6D-4DB8EE4D0B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D3B2F51-BAE6-478C-9B6D-4DB8EE4D0B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2ADEB77-1DAB-4629-9A9F-C55254950FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2ADEB77-1DAB-4629-9A9F-C55254950FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2ADEB77-1DAB-4629-9A9F-C55254950FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2ADEB77-1DAB-4629-9A9F-C55254950FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F989C1-3ADF-40A6-A35C-9E7BC67FF577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F989C1-3ADF-40A6-A35C-9E7BC67FF577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F989C1-3ADF-40A6-A35C-9E7BC67FF577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F989C1-3ADF-40A6-A35C-9E7BC67FF577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
